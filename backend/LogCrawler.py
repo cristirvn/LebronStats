@@ -127,22 +127,22 @@ if __name__ == "__main__":
     ensure_database_exists(db_name, db_user, db_password, db_host, db_port)
 
     class Link(Base):
-        __tablename__ = "all_matches_1"
+        __tablename__ = "all_matches_x"
 
         id = Column("id", Integer, primary_key=True, autoincrement=True)
         season = Column("season", String)
         date = Column("date", String)
-        home_team = Column("Home Team", String)  
-        opp = Column("Opp Teamm", String)
+        home_team = Column("Home_Team", String)  
+        opp = Column("Opp_Team", String)
         result = Column("Result", String)
         reb = Column("Reb", String)
         ast = Column("Ast", String)
         Created_at = Column(TIMESTAMP, server_default=func.now())
         
-        def __init__(self, season, date, team, opp, result, reb, ast):
+        def __init__(self, season, date, home_team, opp, result, reb, ast):
             self.season = season
             self.date = date
-            self.team = team
+            self.home_team = home_team
             self.opp = opp
             self.result = result
             self.reb = reb
@@ -156,6 +156,7 @@ if __name__ == "__main__":
     session = Session()
 
     df = pd.read_csv("modified_file.csv")
+    
     for _, row in df.iterrows():
         element = Link(row["Season"], row["Date"], row["Home Team"], row["Opp team"], row["Result"], row["Rebounds"], 
               row["Assists"])
