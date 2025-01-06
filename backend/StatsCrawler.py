@@ -46,6 +46,11 @@ def retrieve_stats(stats_list, driver):
         date = year.find_element(By.TAG_NAME, 'td').text
         date = str(date)
         date = date.split('-')
+        try:
+            temp_year = int(date[0])
+            date[0] = f"{temp_year}-{temp_year + 1}"
+        except:
+            pass
         years_in_order.append(date[0])
 
     #retrieve all the statistics/year
