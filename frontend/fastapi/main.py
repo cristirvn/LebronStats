@@ -81,7 +81,7 @@ async def season_matches(season: str, db: Session = Depends(get_season_matches))
         raise HTTPException(status_code=404, detail= "No matches found")
     
     simplified_matches = [
-        f"{match.season}, {match.Home_Team}, {match.Opp_Team}, {match.Result}, {match.Reb}, {match.Ast}"
+        f"{match.date}, {match.Home_Team}, {match.Opp_Team}, {match.Result}, {match.Reb}, {match.Ast}"
         for match in matches
     ]
     
