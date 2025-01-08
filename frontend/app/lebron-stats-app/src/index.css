@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input[type="text"] {
+  background-color: #333; /* Dark gray background */
+  color: white; /* White text */
+  border: 2px solid #555; /* Border with a medium gray color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Add padding for better appearance */
+  font-size: 16px; /* Adjust font size */
+  width: 300px; /* Set a fixed width */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+input[type="text"]:focus {
+  outline: none; /* Remove default outline */
+  border-color: #00bfff; /* Light blue border on focus */
+  box-shadow: 0px 0px 10px #00bfff; /* Light blue glow effect */
+}
+
+button {
+  background-color: #00bfff; /* Light blue background */
+  color: black; /* Black text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Add padding */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #008fcc; /* Darker blue on hover */
+}
+
+h1, h2 {
+  color: #00bfff; /* Light blue for headers */
+}
+
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove gaps between table cells */
+  margin-top: 20px; /* Add spacing from top */
+}
+
+table th, table td {
+  border: 1px solid #555; /* Medium gray border */
+  padding: 10px; /* Add padding for readability */
+  text-align: left; /* Left-align text */
+}
+
+table th {
+  background-color: #333; /* Dark gray background for headers */
+  color: #00bfff; /* Light blue text for headers */
+}
+
+table td {
+  background-color: #222; /* Darker gray for table cells */
+}
